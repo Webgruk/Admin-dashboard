@@ -1,8 +1,18 @@
+import { ThemeProvider, createTheme } from '@mui/material/styles'
+import CssBaseline from '@mui/material/CssBaseline'
+import { themeSettings } from './theme.js'
+import { useSelector } from 'react-redux'
+import { useMemo } from 'react'
+
 function App() {
+  const mode = useSelector((state) => state.global.mode)
+  const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
+
   return (
-    <div>
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore,
-      veritatis?
+    <div className="app">
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+      </ThemeProvider>
     </div>
   )
 }
