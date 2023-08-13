@@ -1,3 +1,7 @@
+// black: {
+
+// },
+
 // color design tokens export
 export const tokensDark = {
   grey: {
@@ -15,17 +19,28 @@ export const tokensDark = {
     900: '#141414',
     1000: '#000000', // manually adjusted
   },
+  // primary: {
+  //   // blue
+  //   100: '#d3d4de',
+  //   200: '#a6a9be',
+  //   300: '#7a7f9d',
+  //   400: '#4d547d',
+  //   500: '#21295c',
+  //   600: '#191F45', // manually adjusted
+  //   700: '#141937',
+  //   800: '#0d1025',
+  //   900: '#070812',
+  // },
   primary: {
-    // blue
-    100: '#d3d4de',
-    200: '#a6a9be',
-    300: '#7a7f9d',
-    400: '#4d547d',
-    500: '#21295c',
-    600: '#191F45', // manually adjusted
-    700: '#141937',
-    800: '#0d1025',
-    900: '#070812',
+    100: '#d5d6d9',
+    200: '#abadb3',
+    300: '#81838e',
+    400: '#575a68',
+    500: '#2d3142',
+    600: '#242735',
+    700: '#1b1d28',
+    800: '#12141a',
+    900: '#090a0d',
   },
   secondary: {
     // yellow
@@ -47,9 +62,7 @@ function reverseTokens(tokensDark) {
   const reversedTokens = {}
   Object.entries(tokensDark).forEach(([key, val]) => {
     const keys = Object.keys(val)
-    console.log('🚀 ~ file: theme.js:50 ~ Object.entries ~ keys :', keys)
     const values = Object.values(val)
-    console.log('🚀 ~ file: theme.js:52 ~ Object.entries ~ values:', values)
     const length = keys.length
     const reversedObj = {}
     for (let i = 0; i < length; i++) {
@@ -104,8 +117,8 @@ export const themeSettings = (mode) => {
               main: tokensDark.grey[500],
             },
             background: {
-              default: tokensDark.grey[0],
-              alt: tokensDark.grey[50],
+              // default: tokensDark.grey[0],
+              // alt: tokensDark.grey[50],
             },
           }),
     },
