@@ -10,8 +10,11 @@ import {
   Navigate,
   Route,
 } from 'react-router-dom'
+
 import Dashboard from './scenes/dashboard/index.jsx'
 import Layout from './scenes/layout/index.jsx'
+import Products from './scenes/products/index.jsx'
+
 function App() {
   const mode = useSelector((state) => state.global.mode)
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode])
@@ -21,6 +24,7 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/products" element={<Products />} />
       </Route>,
     ),
   )
