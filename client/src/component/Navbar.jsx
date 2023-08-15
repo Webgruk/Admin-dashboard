@@ -25,7 +25,7 @@ import {
   Box,
 } from '@mui/material'
 
-function Navbar() {
+function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
   const dispatch = useDispatch()
   const theme = useTheme()
 
@@ -38,7 +38,7 @@ function Navbar() {
     <AppBar sx={{ position: 'static', background: 'none', boxShadow: 'none' }}>
       <Toolbar sx={{ justifyContent: 'space-between' }}>
         <FlexBetween>
-          <IconButton onClick={() => console.log('open/close sidebar')}>
+          <IconButton onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             <MenuIcon />
           </IconButton>
           <FlexBetween
@@ -93,13 +93,13 @@ function Navbar() {
                   fontSize="0.85rem"
                   sx={{ color: theme.palette.secondary[100] }}
                 >
-                  {/* {user.name} */}
+                  {user.name}
                 </Typography>
                 <Typography
                   fontSize="0.75rem"
                   sx={{ color: theme.palette.secondary[200] }}
                 >
-                  {/* {user.occupation} */}
+                  {user.occupation}
                 </Typography>
               </Box>
               <ArrowDropDownOutlined

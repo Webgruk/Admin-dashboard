@@ -3,7 +3,6 @@ import CssBaseline from '@mui/material/CssBaseline'
 import { themeSettings } from './theme.js'
 import { useSelector } from 'react-redux'
 import { useMemo } from 'react'
-
 import {
   createBrowserRouter,
   createRoutesFromElements,
