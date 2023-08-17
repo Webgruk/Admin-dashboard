@@ -13,7 +13,14 @@ import salesRoute from './routes/sales.js'
 
 //data import
 import User from './models/User.js'
-import { dataUser, dataProduct, dataProductStat } from './Data/index.js'
+
+import {
+  dataUser,
+  dataProduct,
+  dataProductStat,
+  dataTransaction,
+} from './Data/index.js'
+import Transaction from './models/Transaction.js'
 import Product from './models/Product.js'
 import ProductStat from './models/ProductStat.js'
 
@@ -48,5 +55,6 @@ mongoose
     // User.insertMany(dataUser)
     // Product.insertMany(dataProduct)
     // ProductStat.insertMany(dataProductStat)
+    // Transaction.insertMany(dataTransaction)
   })
   .catch((error) => console.log(`${error}  did not connect`))
