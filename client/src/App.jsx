@@ -17,6 +17,7 @@ import Products from './scenes/products/index.jsx'
 import Customers from './scenes/customers/index.jsx'
 import Transactions from './scenes/Transactions/index.jsx'
 import Geograhpy from './scenes/geograhpy/index.jsx'
+import Overview from './scenes/overview/index.jsx'
 
 function App() {
   const mode = useSelector((state) => state.global.mode)
@@ -31,6 +32,7 @@ function App() {
         <Route path="/customers" element={<Customers />} />
         <Route path="/transactions" element={<Transactions />} />
         <Route path="/geography" element={<Geograhpy />} />
+        <Route path="/overview" element={<Overview />} />
       </Route>,
     ),
   )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Box, useTheme } from '@mui/material'
 import { DataGrid } from '@mui/x-data-grid'
 import { useGetTransactionsQuery } from '../../state/api'
@@ -21,7 +21,6 @@ function Transactions() {
     sort: JSON.stringify(sort),
     search,
   })
-  console.log('🚀 ~ file: index.jsx:24 ~ Transactions ~ data:', data)
 
   const columns = [
     {
