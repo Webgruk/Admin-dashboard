@@ -31,7 +31,7 @@ import { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import profileImage from '../assets/profile.jpeg'
 import FlexBetween from './FlexBetween'
-
+import { PropTypes } from 'prop-types'
 const navItems = [
   {
     text: 'Dashboard',
@@ -235,3 +235,12 @@ function Sidebar({
 }
 
 export default Sidebar
+
+Sidebar.propTypes = {
+  user: PropTypes.any,
+  drawerWidth: PropTypes.any,
+
+  isSidebarOpen: PropTypes.any,
+  setIsSidebarOpen: PropTypes.any,
+  isNonMobile: PropTypes.any,
+}

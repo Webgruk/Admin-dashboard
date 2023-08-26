@@ -1,11 +1,11 @@
 import { Box, useTheme } from '@mui/material'
-import { useGetCustomersQuery } from '../../state/api'
+import { useGetAdminsQuery } from '../../state/api'
+import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 import Header from '../../component/Header'
-import { DataGrid } from '@mui/x-data-grid'
 
-function Customers() {
+const Admin = () => {
   const theme = useTheme()
-  const { data, isLoading } = useGetCustomersQuery()
+  const { data, isLoading } = useGetAdminsQuery()
 
   const columns = [
     {
@@ -50,7 +50,7 @@ function Customers() {
 
   return (
     <Box m="1.5rem 2.5rem">
-      <Header title="CUSTOMERS" subtitle="List of Customers" />
+      <Header title="ADMINS" subtitle="Managing admins and list of admins" />
       <Box
         mt="40px"
         height="75vh"
@@ -84,10 +84,11 @@ function Customers() {
           getRowId={(row) => row._id}
           rows={data || []}
           columns={columns}
+          slots={{ toolbar: GridToolbar }}
         />
       </Box>
     </Box>
   )
 }
 
-export default Customers
+export default Admin

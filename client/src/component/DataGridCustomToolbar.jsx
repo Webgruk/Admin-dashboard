@@ -1,4 +1,3 @@
-import React from 'react'
 import { Search } from '@mui/icons-material'
 import { IconButton, TextField, InputAdornment } from '@mui/material'
 import {
@@ -9,6 +8,7 @@ import {
   GridToolbarFilterButton,
 } from '@mui/x-data-grid'
 import FlexBetween from './FlexBetween'
+import { PropTypes } from 'prop-types'
 
 const DataGridCustomToolbar = ({ searchInput, setSearchInput, setSearch }) => {
   return (
@@ -47,3 +47,9 @@ const DataGridCustomToolbar = ({ searchInput, setSearchInput, setSearch }) => {
 }
 
 export default DataGridCustomToolbar
+DataGridCustomToolbar.propTypes = {
+  searchInput: PropTypes.any,
+  setSearchInput: PropTypes.any,
+
+  setSearch: PropTypes.any,
+}

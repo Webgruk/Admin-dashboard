@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import {
   LightModeOutlined,
   DarkModeOutlined,
@@ -24,6 +24,8 @@ import {
   Typography,
   Box,
 } from '@mui/material'
+
+import { PropTypes } from 'prop-types'
 
 function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
   const dispatch = useDispatch()
@@ -122,3 +124,10 @@ function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
 }
 
 export default Navbar
+
+Navbar.propTypes = {
+  user: PropTypes.any,
+  isSidebarOpen: PropTypes.any,
+
+  setIsSidebarOpen: PropTypes.any,
+}

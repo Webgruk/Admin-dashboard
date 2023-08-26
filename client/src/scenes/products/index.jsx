@@ -16,6 +16,7 @@ import {
 import Header from '../../component/Header'
 import { useGetProductsQuery } from '../../state/api'
 
+import { PropTypes } from 'prop-types'
 const Product = ({
   _id,
   name,
@@ -140,3 +141,14 @@ const Products = () => {
 }
 
 export default Products
+
+Product.propTypes = {
+  _id: PropTypes.any,
+  name: PropTypes.any,
+  description: PropTypes.any,
+  price: PropTypes.any,
+  rating: PropTypes.any,
+  category: PropTypes.any,
+  supply: PropTypes.any,
+  stat: PropTypes.any,
+}

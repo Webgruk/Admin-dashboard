@@ -2,6 +2,7 @@ import { ResponsiveLine } from '@nivo/line'
 import { useTheme } from '@mui/material'
 import { useGetSalesQuery } from '../state/api'
 import { useMemo } from 'react'
+import { PropTypes } from 'prop-types'
 
 const OverviewChart = ({ isDashboard = false, view }) => {
   const theme = useTheme()
@@ -164,3 +165,8 @@ const OverviewChart = ({ isDashboard = false, view }) => {
 }
 
 export default OverviewChart
+
+OverviewChart.propTypes = {
+  isDashboard: PropTypes.any,
+  view: PropTypes.any,
+}

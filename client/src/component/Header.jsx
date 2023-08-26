@@ -1,5 +1,6 @@
 import { Typography, Box, useTheme } from '@mui/material'
 import React from 'react'
+import { PropTypes } from 'prop-types'
 
 const Header = ({ title, subtitle }) => {
   const theme = useTheme()
@@ -21,3 +22,8 @@ const Header = ({ title, subtitle }) => {
 }
 
 export default Header
+
+Header.propTypes = {
+  title: PropTypes.any,
+  subtitle: PropTypes.any,
+}

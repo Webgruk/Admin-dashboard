@@ -40,7 +40,7 @@ export const getTransactions = async (req, res) => {
     // sort should look like this: { "field": "userId", "sort": "desc"}
     const { page = 1, pageSize = 20, sort = null, search = '' } = req.query
 
-    // formatted sort should look like { userId: -1 }
+    // formatted sort should look like { userId: -1 }lssdos
     const generateSort = () => {
       const sortParsed = JSON.parse(sort)
       const sortFormatted = {
@@ -85,10 +85,6 @@ export const getGeography = async (req, res) => {
       acc[countryISO3]++
       return acc
     }, {})
-    console.log(
-      '🚀 ~ file: client.js:88 ~ mappedLocations ~ mappedLocations:',
-      mappedLocations,
-    )
 
     const formattedLocations = Object.entries(mappedLocations).map(
       ([country, count]) => {

@@ -1,7 +1,7 @@
-import React from 'react'
 import { ResponsivePie } from '@nivo/pie'
 import { Box, Typography, useTheme } from '@mui/material'
 import { useGetSalesQuery } from '../state/api'
+import { PropTypes } from 'prop-types'
 
 const BreakdownChart = ({ isDashboard = false }) => {
   const { data, isLoading } = useGetSalesQuery()
@@ -138,3 +138,6 @@ const BreakdownChart = ({ isDashboard = false }) => {
 }
 
 export default BreakdownChart
+BreakdownChart.propTypes = {
+  isDashboard: PropTypes.any,
+}
